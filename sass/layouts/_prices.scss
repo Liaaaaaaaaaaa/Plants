@@ -1,0 +1,76 @@
+.prices {
+    padding: 40px 0 115px;
+    background-color: $color-light;
+}
+
+.wrapper__prices {
+    display: flex;
+    justify-content: space-between;
+}
+
+// .prices__tariffs {
+// }
+.tariffs-title {
+    @include font (normal, 700, 4rem, 4.8rem);
+    margin-bottom: 60px;
+}
+
+// .tariffs {
+// }
+.tariff__container {
+    background: #EDF2EC;
+    margin-bottom: 32px;
+    padding: 16px 40px 14px;
+    width: 250px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tariff {
+    width: 16px;
+    height: 16px;
+    border: none;
+    background: #D9D9D9;
+    border-radius: 50%;
+    text-align: center;
+
+}
+.tariff__text {
+    @include font (normal, 700, 2rem, 2rem);
+    }
+// .tariff2 {
+//     width: 170px;
+//     padding: 0 0px;
+//     border: none;
+//     background: inherit;
+//     // border-radius: 50%;
+//     text-align: start;
+// }
+
+// .tariff3 {
+//     background: #EDF2EC;
+//     padding: 16px 40px 14px;
+//     width: 250px;
+//     border-radius: 20px;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     border: none;
+ 
+// }
+
+.help {
+    text-align: right;
+}
+
+.help__title {
+    @include font (normal, 700, 4rem, 5rem);
+    max-width: 452px;
+    margin-bottom: 38px;
+}
+
+.button__prices {
+    margin-bottom: 39px;
+}
