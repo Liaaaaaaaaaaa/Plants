@@ -690,6 +690,7 @@ p {
 
 .Contact-us {
   padding-top: 60px;
+  max-height: 550px;
 }
 
 .wrapper__contacts {
