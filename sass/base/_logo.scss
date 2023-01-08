@@ -1,0 +1,11 @@
+.logo {
+    color: $color-dark;
+    @include font(normal, 400, 16px, 21px);
+    // max-width: 79px;
+    // max-height: 21px;
+}
+
+.logo__img {
+    margin-right: 1px;
+    width: 20px;
+}

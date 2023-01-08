@@ -1,0 +1,27 @@
+.about {
+    padding: 94px 0;
+    background-color: $color-light;
+  
+}
+
+.about__wrapper {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.about__content {
+    max-width: 42.1vw;
+    padding-top: 67px;
+}
+
+.about__title {
+    margin-bottom: 40px;
+    max-width: 463px;
+    @extend %font-add;
+}
+// .about__text {
+// }
+
+.about__img {
+width: 464px;
+}

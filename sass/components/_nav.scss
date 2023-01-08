@@ -1,0 +1,19 @@
+.nav {
+    display: flex;
+    
+}
+
+.nav__link {
+   padding: 12px 13px;
+   a {
+    color: $color-nav;
+    @extend %transition;
+    &:hover {
+        color: $color-brand;
+    }
+   }
+   
+   &:last-child {
+    padding: 12px 0 12px 13px;
+   } 
+}

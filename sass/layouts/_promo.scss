@@ -1,0 +1,29 @@
+.promo {
+padding: 62.5px 0;
+}
+
+.promo__wrapper {
+display: flex;
+flex-direction: row-reverse;
+// align-items: center;
+justify-content: space-between;
+
+}
+
+.background__leafs {
+    background-color: $color-background;
+    max-height: 407px;
+}
+
+.promo__content {
+    padding: 36px 0 0 224px;
+}
+
+.promo__title {
+    margin-bottom: 42px;
+}
+.promo__text {
+    margin-bottom: 48px; 
+}
+
+
