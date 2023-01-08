@@ -26,6 +26,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &:hover {
+        background: #D6E7D2;
+    }
 }
 
 .tariff {
@@ -37,9 +41,11 @@
     text-align: center;
 
 }
+
 .tariff__text {
     @include font (normal, 700, 2rem, 2rem);
-    }
+}
+
 // .tariff2 {
 //     width: 170px;
 //     padding: 0 0px;
@@ -58,7 +64,7 @@
 //     justify-content: space-between;
 //     align-items: center;
 //     border: none;
- 
+
 // }
 
 .help {

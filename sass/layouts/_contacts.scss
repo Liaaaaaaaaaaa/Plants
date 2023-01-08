@@ -1,6 +1,6 @@
 .Contact-us {
     padding-top: 60px;
-max-height: 550px;
+    max-height: 550px;
 }
 
 .wrapper__contacts {
@@ -27,18 +27,23 @@ max-height: 550px;
 .form__select {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     align-items: center;
-   background: #D6E7D2;
+    background: #D6E7D2;
     padding: 5px 17.5px 5px 20px;
     width: 450px;
     height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &:hover {
+        background: #C1E698;
+    }
 }
 
 .contacts__text {
     @include font(normal, 400, 20px, 40px, #717171);
 }
+
 .contacts__select {
     background: inherit;
     width: 16px;

@@ -384,6 +384,7 @@ p, ul, li {
 html {
   font-size: 10px;
   background-color: #EDF2EC;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -652,6 +653,9 @@ p {
   justify-content: space-between;
   align-items: center;
 }
+.tariff__container:hover {
+  background: #D6E7D2;
+}
 
 .tariff {
   width: 16px;
@@ -723,6 +727,9 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.form__select:hover {
+  background: #C1E698;
 }
 
 .contacts__text {
