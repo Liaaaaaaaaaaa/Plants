@@ -415,6 +415,11 @@ h2 {
   line-height: 5.2rem;
   color: #499A18;
 }
+@media (max-width: 768px) {
+  h2 {
+    font-size: 35px;
+  }
+}
 
 p {
   font-style: normal;
@@ -446,8 +451,48 @@ p {
   width: 20px;
 }
 
+.wrapper {
+  max-width: 1222px;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 380px) {
+  .wrapper {
+    padding: 0 25px;
+  }
+}
+
+.hamburger {
+  display: none;
+}
+@media (max-width: 380px) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;
+    height: 24px;
+  }
+}
+
+.hamburger__line {
+  display: inline-block;
+  height: 2px;
+  background: #717171;
+  width: 100%;
+}
+
 .nav {
   display: flex;
+}
+@media (max-width: 380px) {
+  .nav {
+    display: none;
+  }
 }
 
 .nav__link {
@@ -458,9 +503,24 @@ p {
 }
 .nav__link a:hover {
   color: #E06733;
+  font-weight: 700;
 }
 .nav__link:last-child {
   padding: 12px 0 12px 13px;
+}
+@media (max-width: 768px) {
+  .nav__link {
+    padding: 0 13px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 4.7rem;
+    color: "#000000";
+    font-family: "Inika";
+  }
+}
+.nav__link:last-child {
+  padding: 0 0 0 13px;
 }
 
 .button {
@@ -491,13 +551,13 @@ p {
   padding: auto;
 }
 
-.wrapper {
-  max-width: 1222px;
-  margin: 0 auto;
-}
-
 .header {
   padding: 42px 0 2px;
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 35px 0;
+  }
 }
 
 .header-wrapper {
@@ -509,28 +569,71 @@ p {
 .promo {
   padding: 62.5px 0;
 }
+@media (max-width: 768px) {
+  .promo {
+    padding: 40px 0 70px;
+  }
+}
 
 .promo__wrapper {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .promo__wrapper {
+    flex-direction: row;
+  }
+}
 
 .background__leafs {
   background-color: #EDF2EC;
   max-height: 407px;
 }
+@media (max-width: 768px) {
+  .background__leafs {
+    max-height: 254px;
+  }
+}
 
 .promo__content {
   padding: 36px 0 0 224px;
+}
+@media (max-width: 768px) {
+  .promo__content {
+    padding: 0;
+  }
 }
 
 .promo__title {
   margin-bottom: 42px;
 }
+@media (max-width: 768px) {
+  .promo__title {
+    padding: 0;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 50px;
+    color: #717171;
+    margin-bottom: 30px;
+  }
+}
 
 .promo__text {
   margin-bottom: 48px;
+}
+@media (max-width: 768px) {
+  .promo__text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #636060;
+    margin-bottom: 30px;
+  }
 }
 
 .about {

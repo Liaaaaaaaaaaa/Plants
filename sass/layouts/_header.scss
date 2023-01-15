@@ -1,5 +1,8 @@
 .header {
     padding: 42px 0 2px;
+    @include media-tablet {
+        padding: 35px 0;
+    }
 }
 
 .header-wrapper {

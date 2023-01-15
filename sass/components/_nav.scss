@@ -1,19 +1,35 @@
 .nav {
     display: flex;
-    
+
+    @include media-mobile {
+        display: none;
+    }
 }
 
 .nav__link {
-   padding: 12px 13px;
-   a {
-    color: $color-nav;
-    @extend %transition;
-    &:hover {
-        color: $color-brand;
+    padding: 12px 13px;
+
+    a {
+        color: $color-nav;
+        @extend %transition;
+
+        &:hover {
+            color: $color-brand;
+            font-weight: 700;
+        }
     }
-   }
-   
-   &:last-child {
-    padding: 12px 0 12px 13px;
-   } 
+
+    &:last-child {
+        padding: 12px 0 12px 13px;
+    }
+
+    @include media-tablet {
+        padding: 0 13px;
+        @include font (normal, 400, 1.6rem, 4.7rem);
+        font-family: 'Inika'
+    }
+
+    &:last-child {
+        padding: 0 0 0 13px;
+    }
 }

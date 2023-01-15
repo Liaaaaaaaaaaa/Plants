@@ -6,13 +6,14 @@
 @import "base/normalize";
 @import "base/base";
 @import "base/logo";
+@import "base/wrapper";
+@import "base/hamburger";
 
 // components
 @import "components/nav";
 @import "components/buttons";
 
 // layouts 
-@import "layouts/wrapper";
 @import "layouts/header";
 @import "layouts/promo";
 @import "layouts/about";

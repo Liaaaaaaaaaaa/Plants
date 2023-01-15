@@ -1,0 +1,20 @@
+.hamburger {
+    display: none;
+
+    @include media-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 40px;
+        height: 24px;
+    }
+
+}
+
+.hamburger__line {
+    display: inline-block;
+    height: 2px;
+    background: $color-text7;
+    // border-radius: 2px;
+    width: 100%;
+}
