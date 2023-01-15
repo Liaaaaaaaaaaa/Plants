@@ -703,6 +703,7 @@ p {
 }
 
 .contacts__title {
+  font-family: "Inika", Verdana, sans-serif;
   text-align: center;
   font-style: normal;
   font-weight: 700;
