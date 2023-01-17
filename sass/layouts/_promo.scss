@@ -1,7 +1,11 @@
 .promo {
     padding: 62.5px 0;
+
     @include media-tablet {
         padding: 40px 0 70px;
+    }
+    @include media-mobile {
+        padding: 24px 0;
     }
 }
 
@@ -18,33 +22,48 @@
 .background__leafs {
     background-color: $color-background;
     max-height: 407px;
+
     @include media-tablet {
-        max-height: 254px; 
+        max-height: 254px;
+    }
+
+    @include media-mobile {
+        display: none;
     }
 }
 
 .promo__content {
     padding: 36px 0 0 224px;
+
     @include media-tablet {
         padding: 0;
+        max-width: 346px;
     }
 }
 
 .promo__title {
     margin-bottom: 42px;
+
     @include media-tablet {
         padding: 0;
         font-family: 'Inter';
-        @include font ( normal, 700, 35px,  50px, $color-text7);
+        @include font (normal, 700, 35px, 50px, $color-text7);
         margin-bottom: 30px;
+    }
+    @include media-mobile {
+        @include font (normal, 700, 25px, 35px);
     }
 }
 
 .promo__text {
     margin-bottom: 48px;
+
     @include media-tablet {
         font-family: 'Inter';
-        @include font (normal, 400, 16px,25px, $color-text6);
+        @include font (normal, 400, 16px, 26px, $color-text6);
         margin-bottom: 30px;
+    }
+    @include media-mobile {
+        @include font (normal, 400, 16px, 25px);
     }
 }

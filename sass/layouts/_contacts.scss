@@ -1,12 +1,20 @@
 .Contact-us {
     padding-top: 60px;
     max-height: 550px;
+    @include media-tablet {
+        padding-top: 40px;
+        max-height: 100%;
+    }
 }
 
 .wrapper__contacts {
     display: flex;
     justify-content: space-between;
 
+    @include media-tablet {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 }
 
 // .contacts__container {
@@ -17,12 +25,19 @@
     text-align: center;
     @include font (normal, 700, 40px, 52px);
     margin-bottom: 37px;
+    @include media-tablet {
+        margin-bottom: 100px;
+    }
 }
 
 .contacts__img {
     position: relative;
     bottom: 95px;
 
+    @include media-tablet {
+        width: 200px;
+        position: static;
+    }
 }
 
 .form__select {
@@ -35,6 +50,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include media-tablet {
+        margin-bottom: 250px;
+    }
 
     &:hover {
         background: #C1E698;
