@@ -13,6 +13,7 @@
 .projects__title {
     display: flex;
     margin-bottom: 90px;
+    flex-wrap: wrap;
 
     @include media-tablet {
         flex-direction: column;
@@ -47,6 +48,7 @@
     // max-width: 597px;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 
     @include media-tablet {
         justify-content: flex-start;
@@ -73,7 +75,8 @@
 
 .layout-3-column {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns: repeat(3, 1fr );
     grid-column-gap: 116px;
     grid-row-gap: 55px;
 
@@ -82,6 +85,7 @@
         grid-column-gap: 106px;
         grid-row-gap: 38px;
     }
+
     @include media-mobile {
         grid-template-columns: repeat(1, 1fr);
         grid-column-gap: 0;

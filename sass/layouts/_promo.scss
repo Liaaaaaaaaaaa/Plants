@@ -21,10 +21,10 @@
 
 .background__leafs {
     background-color: $color-background;
-    max-height: 407px;
+    max-height: 28.3vw;
 
     @include media-tablet {
-        max-height: 254px;
+        max-height: 33vw;
     }
 
     @include media-mobile {

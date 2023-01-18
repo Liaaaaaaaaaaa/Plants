@@ -13,6 +13,7 @@
 .wrapper__prices {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     @include media-mobile {
         flex-direction: column;
     }
@@ -142,8 +143,8 @@
 }
 
 .prices__img {
-        width: 152px;
-        height: 175px;
+        max-width: 152px;
+        max-height: 175px;
    @include media-mobile {
     display: none;
    }
