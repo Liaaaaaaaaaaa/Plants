@@ -1,5 +1,14 @@
 .header {
+ 
     padding: 42px 0 2px;
+    @include media-tablet {
+        padding: 35px 0;
+        // top: 0px;
+        //    position: relative;
+        //   transition: top 0.9s ease 0.3s;
+        //    right: 0;
+    }
+  
 }
 
 .header-wrapper {
@@ -9,4 +18,7 @@
     @extend %font-add;
 }
 
+.header__item {
+display: none;
+}
 

@@ -1,19 +1,73 @@
 .nav {
     display: flex;
+align-items: center;
+flex-wrap: wrap;
+    @include media-mobile {
+            display: flex;
+            // position: absolute;
+            flex-direction: column;
+            padding: 0;
+            align-items: flex-start;
     
+            // top: 0px;
+            // transition: top 0.7s ease 0.1s;
+    
+            &__link {
+                padding: 0;
+    
+                &:last-child {
+                    padding: 0;
+                }
+            }
+    
+    
+            display: flex;
+                flex-direction: column;
+                align-items: baseline;
+                left: 0;
+                padding: 35px 25px;
+                position: absolute;
+        top: 0px;
+        width: 100%;
+        background: $color-background;
+        // box-shadow: 0 10000px 0 10000px rgb(0 0 0 / 50%);
+        transition: top 0.7s ease 0.1s;
+
+
+        // display: flex;
+        // background: $color-background;
+        // position: absolute;
+        top: -400px;
+        // transition: top 0.9s ease 0.3s;
+        // width: 100%;
+    }
 }
 
 .nav__link {
-   padding: 12px 13px;
-   a {
-    color: $color-nav;
-    @extend %transition;
-    &:hover {
-        color: $color-brand;
+    padding: 12px 13px;
+
+    a {
+        color: $color-nav;
+        @extend %transition;
+
+        &:hover {
+            color: $color-brand;
+            font-weight: 700;
+        }
     }
-   }
-   
-   &:last-child {
-    padding: 12px 0 12px 13px;
-   } 
+
+    &:last-child {
+        padding: 12px 0 12px 13px;
+    }
+
+    @include media-tablet {
+        padding: 0 13px;
+        @include font (normal, 400, 1.6rem, 4.7rem);
+        font-family: 'Inika'
+    }
+
+    &:last-child {
+        padding: 0 0 0 13px;
+    }
 }
+

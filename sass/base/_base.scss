@@ -7,6 +7,9 @@ html {
   body {
     font-size: 2rem;
     font-family: 'Inter', Verdana, sans-serif;
+
+    // overflow: hidden;
+
   }
   
   li {
@@ -23,6 +26,9 @@ html {
 
   h2 {
     @include font (normal, 400, 4rem, 5.2rem, #499A18);
+    @include media-tablet {
+      font-size: 35px;
+    }
   }
 
 
@@ -38,3 +44,4 @@ html {
 .color_brand {
   color: $color-brand;
 }
+

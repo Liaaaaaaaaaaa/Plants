@@ -1,23 +1,54 @@
 .footer {
     background-color: $color-light;
     padding: 40px 0;
-    
+
+    @include media-tablet {
+        padding: 33px 0 18px;
+    }
 }
 
 
 .footer__content {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
         color: $color-dark;
-     }
+        @include font (normal, 400, 20px, 24px);
+    }
+
+    @include media-tablet {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 16px; 
+    }
 }
 
+// .github__text {
+//     width: 210px;
+//     vertical-align:middle;
+// }
+
 .network {
-display: flex;
-@include font (normal, 400, 2rem, 5rem);
-li {
-    margin-left: 20px;
-}
+    display: flex;
+    @include font (normal, 400, 2rem, 5rem);
+
+    @include media-tablet {
+        padding: 0;
+    }
+
+    li {
+        margin-left: 20px;
+    }
+
+    @include media-tablet {
+        li {
+            margin-left: 23px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
 }
