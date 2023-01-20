@@ -5,6 +5,7 @@
     @include media-tablet {
         padding: 40px 0 88px;
     }
+
     @include media-mobile {
         padding: 25px 0 40px;
     }
@@ -14,6 +15,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
     @include media-mobile {
         flex-direction: column;
     }
@@ -24,6 +26,7 @@
         padding: 0 53px;
     }
 }
+
 .tariffs-title {
     @include font (normal, 700, 4rem, 4.8rem);
     margin-bottom: 60px;
@@ -32,6 +35,7 @@
         @include font (normal, 700, 3.5rem, 4.2rem);
         margin-bottom: 57px;
     }
+
     @include media-mobile {
         text-align: center;
         margin-bottom: 40px;
@@ -43,6 +47,7 @@
     border: 1px solid #E3E1D5;
     border-radius: 20px;
     padding: 34px 40px 0;
+
     @include media-mobile {
         padding: 29px 22px;
     }
@@ -57,12 +62,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     @include media-mobile {
         width: 100%;
         padding: 16px 30px;
         margin-bottom: 14px;
+
         &:last-child {
-            margin-bottom: 0; 
+            margin-bottom: 0;
         }
     }
 
@@ -83,6 +90,7 @@
 
 .tariff__text {
     @include font (normal, 700, 2rem, 2rem);
+
     @include media-mobile {
         @include font (normal, 700, 15px, 20px)
     }
@@ -118,10 +126,13 @@
         align-items: flex-end;
         padding: 99px 0 0 40px;
     }
+
     @include media-mobile {
-        padding: 19px 0 0 0; 
+        padding: 19px 0 0 0;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
     }
 }
 
@@ -139,29 +150,34 @@
         text-align: center;
         margin-bottom: 14px;
         @include font (normal, 700, 20px, 35px);
+        // word-wrap: break-word;
+        // flex-wrap: wrap;
+        // white-space: normal;
     }
 }
 
-.prices__img {
+    .prices__img {
         max-width: 152px;
         max-height: 175px;
-   @include media-mobile {
-    display: none;
-   }
-}
 
-.button__prices {
-    margin-bottom: 39px;
-
-    @include media-tablet {
-        margin-bottom: 34px;
-    }
-    @include media-mobile {
-        margin-bottom: 0; 
-        font-weight: 700;
-        background: $color-light;
-        padding: 8px 22px;
-     font-family: "Inika", sans-serif;
+        @include media-mobile {
+            display: none;
+        }
     }
 
-}
+    .button__prices {
+        margin-bottom: 39px;
+
+        @include media-tablet {
+            margin-bottom: 34px;
+        }
+
+        @include media-mobile {
+            margin-bottom: 0;
+            font-weight: 700;
+            background: $color-light;
+            padding: 8px 22px;
+            font-family: "Inika", sans-serif;
+        }
+
+    }

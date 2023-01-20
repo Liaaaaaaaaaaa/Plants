@@ -1097,6 +1097,8 @@ p {
     padding: 19px 0 0 0;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
   }
 }
 
