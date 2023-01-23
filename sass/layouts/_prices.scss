@@ -119,6 +119,7 @@
 
 .help {
     text-align: right;
+    
 
     @include media-tablet {
         display: flex;
@@ -136,6 +137,7 @@
     }
 }
 
+
 .help__title {
     @include font (normal, 700, 4rem, 5rem);
     max-width: 460px;
@@ -144,6 +146,7 @@
     @include media-tablet {
         @include font (normal, 700, 2.2rem, 3.5rem);
         margin-bottom: 30px;
+        max-width: 296px;
     }
 
     @include media-mobile {

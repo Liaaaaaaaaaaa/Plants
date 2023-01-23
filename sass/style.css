@@ -1119,6 +1119,7 @@ p {
     line-height: 3.5rem;
     color: "#000000";
     margin-bottom: 30px;
+    max-width: 296px;
   }
 }
 @media (max-width: 380px) {
