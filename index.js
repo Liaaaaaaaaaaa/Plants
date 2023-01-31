@@ -30,8 +30,71 @@ document.addEventListener('mousedown', (e) => {
     }
 });
 
-navLink.forEach(link=> {
+navLink.forEach(link => {
     link.addEventListener('click', closeBurgerMenu);
 
 })
 
+//-----------Service ------------------
+
+const buttonContainerService = document.querySelector('.title__buttons');
+const projectService = document.querySelector('.layout-3-column');
+const projects = document.querySelectorAll('.project');
+const buttons = document.querySelectorAll('div > button');
+const buttonService = Array.from(buttons).filter(e => e.parentElement.classList.value === 'title__buttons');
+
+
+
+
+
+function buttonServiceClick(e, nameButton, nameTitle) {
+    e.target.classList.toggle('button_active');
+    if (e.target.innerText === nameButton) {
+        let massiveProjectTitle = Array.from(projects).map(e => e.childNodes[3].firstElementChild);
+         let blurforNotNameTitle = Array.from(massiveProjectTitle.entries()).filter(i => i[1].innerText !== nameTitle).map(i => i[0]);
+        let blurforNameTitle = Array.from(massiveProjectTitle.entries()).filter(i => i[1].innerText === nameTitle).map(i => i[0]);
+
+
+        if (buttonService.filter(e => e.classList.value.includes('button_active')).length === 2)  {
+            for (let ind = 0; ind < blurforNameTitle.length; ind++) {
+                projects[blurforNameTitle[ind]].classList.toggle('blur');
+            }
+        } 
+
+        if (buttonService.filter(e => e.classList.value.includes('button_active')).length  <= 1) {
+            for (let ind = 0; ind < blurforNotNameTitle.length; ind++) {
+                projects[blurforNotNameTitle[ind]].classList.toggle('blur');
+            }
+        }
+        
+        if (3 === buttonService.filter(e => e.classList.value.includes('button_active')).length )  {
+            buttonService.forEach(e => e.classList.remove('button_active'));
+            buttonServiceClick(e, nameButton, nameTitle);
+            for (let ind = 0; ind < blurforNameTitle.length; ind++) {
+                projects[blurforNameTitle[ind]].classList.toggle('blur');
+            }
+        } 
+    }
+
+}
+
+
+buttonContainerService.addEventListener('click', function (e) {
+    if (e.target.closest('.button')) {
+        let nameButton = e.target.innerText;
+        if (nameButton === 'Gardens') {
+            let nameTitle = 'Garden care';
+            buttonServiceClick(e, nameButton, nameTitle);
+        }
+        if (nameButton === 'Lawn') {
+            let nameTitle = 'Lawn care';
+            buttonServiceClick(e, nameButton, nameTitle);
+        }
+        if (nameButton === 'Planting') {
+            let nameTitle = 'Planting';
+            buttonServiceClick(e, nameButton, nameTitle);
+        }
+
+    }
+
+})

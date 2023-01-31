@@ -564,6 +564,10 @@ p {
   background-color: #E06733;
   color: #ffffff;
 }
+.button_active {
+  background-color: #E06733;
+  color: #ffffff;
+}
 @media (max-width: 380px) {
   .button {
     font-style: normal;
@@ -1353,6 +1357,10 @@ p {
     top: 0px;
     box-shadow: 0 10000px 0 10000px rgba(0, 0, 0, 0.5);
   }
+}
+
+.blur {
+  filter: blur(3px);
 }
 
 /*# sourceMappingURL=style.css.map */

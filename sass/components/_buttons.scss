@@ -12,11 +12,18 @@
 
     transition: all .3s;
 
+    &_active {
+        background-color: $color-brand;
+        color: $color-light;
+    }
+
     @include media-mobile {
         @include font (normal, 400, 15px, 20px);
         width: 121px;
         height: 35px;
     }
+
+
 }
 
 .button_learnMore {
