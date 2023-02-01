@@ -51,29 +51,57 @@ function buttonServiceClick(e, nameButton, nameTitle) {
     e.target.classList.toggle('button_active');
     if (e.target.innerText === nameButton) {
         let massiveProjectTitle = Array.from(projects).map(e => e.childNodes[3].firstElementChild);
-         let blurforNotNameTitle = Array.from(massiveProjectTitle.entries()).filter(i => i[1].innerText !== nameTitle).map(i => i[0]);
+        let blurforNotNameTitle = Array.from(massiveProjectTitle.entries()).filter(i => i[1].innerText !== nameTitle).map(i => i[0]);
         let blurforNameTitle = Array.from(massiveProjectTitle.entries()).filter(i => i[1].innerText === nameTitle).map(i => i[0]);
 
+        console.log(Array.from(buttonService.filter(e => e.classList.value.includes('button_active'))));
+        console.log(buttonService.filter(e => e.classList.value.includes('button_active')).length);
+        console.log(Number(buttonService.filter(e => e.classList.value.includes('button_active')).length) === 0);
 
-        if (buttonService.filter(e => e.classList.value.includes('button_active')).length === 2)  {
-            for (let ind = 0; ind < blurforNameTitle.length; ind++) {
-                projects[blurforNameTitle[ind]].classList.toggle('blur');
-            }
-        } 
-
-        if (buttonService.filter(e => e.classList.value.includes('button_active')).length  <= 1) {
+        if (buttonService.filter(e => e.classList.value.includes('button_active').length === 1) && (e.target.classList.value.includes('button_active')) === true) {
             for (let ind = 0; ind < blurforNotNameTitle.length; ind++) {
                 projects[blurforNotNameTitle[ind]].classList.toggle('blur');
             }
         }
-        
-        if (3 === buttonService.filter(e => e.classList.value.includes('button_active')).length )  {
+
+        if (Number(buttonService.filter(e => e.classList.value.includes('button_active')).length) === 0) {
+            console.log("Hello");
+            // for (let ind = 0; ind < blurforNameTitle.length; ind++) {
+            //     projects[blurforNameTitle[ind]].classList.toggle('blur');
+            // }
+            for (let ind = 0; ind < blurforNotNameTitle.length; ind++) {
+                projects[blurforNotNameTitle[ind]].classList.toggle('blur');
+            }
+        }
+
+        if ((buttonService.filter(e => e.classList.value.includes('button_active')).length === 1) && ((e.target.classList.value.includes('button_active')) === false))  {
+            for (let ind = 0; ind < blurforNameTitle.length; ind++) {
+                projects[blurforNameTitle[ind]].classList.toggle('blur');
+            }
+        }
+
+          if (buttonService.filter(e => e.classList.value.includes('button_active')).length === 2) {
+            for (let ind = 0; ind < blurforNameTitle.length; ind++) {
+                projects[blurforNameTitle[ind]].classList.toggle('blur');
+            }
+            for (let ind = 0; ind < blurforNotNameTitle.length; ind++) {
+                projects[blurforNotNameTitle[ind]].classList.toggle('blur');
+            }
+        } 
+        console.log(blurforNameTitle);
+
+        if (3 === buttonService.filter(e => e.classList.value.includes('button_active')).length) {
             buttonService.forEach(e => e.classList.remove('button_active'));
             buttonServiceClick(e, nameButton, nameTitle);
             for (let ind = 0; ind < blurforNameTitle.length; ind++) {
                 projects[blurforNameTitle[ind]].classList.toggle('blur');
             }
-        } 
+            for (let ind = 0; ind < blurforNotNameTitle.length; ind++) {
+                projects[blurforNotNameTitle[ind]].classList.toggle('blur');
+            }
+        }
+
+      
     }
 
 }

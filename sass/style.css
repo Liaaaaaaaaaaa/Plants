@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.nav__link a {
+.button, .nav__link a {
   transition: all 0.3s ease-out;
 }
 
