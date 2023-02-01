@@ -9,13 +9,14 @@
     &:hover {
         background-color: $color-brand;
         color: $color-light;
+        @extend %transition;
     }
 
-    transition: all .3s;
 
     &_active {
         background-color: $color-brand;
         color: $color-light;
+        @extend %transition;
     }
 
     @include media-mobile {

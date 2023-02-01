@@ -44,9 +44,6 @@ const buttons = document.querySelectorAll('div > button');
 const buttonService = Array.from(buttons).filter(e => e.parentElement.classList.value === 'title__buttons');
 
 
-
-
-
 function buttonServiceClick(e, nameButton, nameTitle) {
     e.target.classList.toggle('button_active');
     if (e.target.innerText === nameButton) {
@@ -66,28 +63,25 @@ function buttonServiceClick(e, nameButton, nameTitle) {
 
         if (Number(buttonService.filter(e => e.classList.value.includes('button_active')).length) === 0) {
             console.log("Hello");
-            // for (let ind = 0; ind < blurforNameTitle.length; ind++) {
-            //     projects[blurforNameTitle[ind]].classList.toggle('blur');
-            // }
             for (let ind = 0; ind < blurforNotNameTitle.length; ind++) {
                 projects[blurforNotNameTitle[ind]].classList.toggle('blur');
             }
         }
 
-        if ((buttonService.filter(e => e.classList.value.includes('button_active')).length === 1) && ((e.target.classList.value.includes('button_active')) === false))  {
+        if ((buttonService.filter(e => e.classList.value.includes('button_active')).length === 1) && ((e.target.classList.value.includes('button_active')) === false)) {
             for (let ind = 0; ind < blurforNameTitle.length; ind++) {
                 projects[blurforNameTitle[ind]].classList.toggle('blur');
             }
         }
 
-          if (buttonService.filter(e => e.classList.value.includes('button_active')).length === 2) {
+        if (buttonService.filter(e => e.classList.value.includes('button_active')).length === 2) {
             for (let ind = 0; ind < blurforNameTitle.length; ind++) {
                 projects[blurforNameTitle[ind]].classList.toggle('blur');
             }
             for (let ind = 0; ind < blurforNotNameTitle.length; ind++) {
                 projects[blurforNotNameTitle[ind]].classList.toggle('blur');
             }
-        } 
+        }
         console.log(blurforNameTitle);
 
         if (3 === buttonService.filter(e => e.classList.value.includes('button_active')).length) {
@@ -100,12 +94,8 @@ function buttonServiceClick(e, nameButton, nameTitle) {
                 projects[blurforNotNameTitle[ind]].classList.toggle('blur');
             }
         }
-
-      
     }
-
 }
-
 
 buttonContainerService.addEventListener('click', function (e) {
     if (e.target.closest('.button')) {
@@ -124,5 +114,40 @@ buttonContainerService.addEventListener('click', function (e) {
         }
 
     }
-
 })
+
+
+//-------Accordion в секции prices реализация 3-х выпадающих списков + 50
+
+const tariffButons = document.querySelectorAll('.tariff');
+const tariffs = document.querySelector('.tariffs');
+const tariffContainer = document.querySelectorAll('.tariff__container');
+const none = document.querySelectorAll('.none');
+
+
+function OpenTariff(e) {
+    e.target.classList.toggle('active_tariff');
+    e.target.parentNode.parentNode.classList.toggle('active__prise');
+    e.target.parentNode.nextElementSibling.classList.toggle('active__part2');
+}
+
+tariffs.addEventListener('click', function (e) {
+    if (e.target.closest('.tariff')) {
+
+        OpenTariff(e)
+
+        if (Array.from(tariffButons).filter(e => e.classList.value.includes('active_tariff')).length === 2) {
+            console.log('hello');
+            Array.from(tariffButons).forEach(e => e.classList.remove('active_tariff'));
+            Array.from(tariffContainer).forEach(e => e.classList.remove('active__prise'));
+            Array.from(none).forEach(e => e.classList.remove('active__part2'));
+            OpenTariff(e);
+        }
+
+    }
+})
+
+
+//-----------Contacts реализован select с выбором городов +25
+
+
