@@ -122,7 +122,7 @@ buttonContainerService.addEventListener('click', function (e) {
 const tariffButons = document.querySelectorAll('.tariff');
 const tariffs = document.querySelector('.tariffs');
 const tariffContainer = document.querySelectorAll('.tariff__container');
-const none = document.querySelectorAll('.none');
+const nonePrise = document.querySelectorAll('.none-prise');
 
 
 function OpenTariff(e) {
@@ -140,7 +140,7 @@ tariffs.addEventListener('click', function (e) {
             console.log('hello');
             Array.from(tariffButons).forEach(e => e.classList.remove('active_tariff'));
             Array.from(tariffContainer).forEach(e => e.classList.remove('active__prise'));
-            Array.from(none).forEach(e => e.classList.remove('active__part2'));
+            Array.from(nonePrise).forEach(e => e.classList.remove('active__part2'));
             OpenTariff(e);
         }
 
@@ -150,4 +150,75 @@ tariffs.addEventListener('click', function (e) {
 
 //-----------Contacts реализован select с выбором городов +25
 
+
+const selectButton = document.querySelector('.select__button');
+const selectTitle = document.querySelector('.select__title');
+const containerActive = document.querySelector('.container__active');
+const options = document.querySelectorAll('.option');
+const noneContacts = document.querySelector('.none-contacts');
+const noneCards = document.querySelector('.none-cards');
+let selectText = document.querySelector('.select__text');
+const none = document.querySelectorAll('.none');
+const canandaigua = document.querySelectorAll('.canandaigua');
+const newYorkCity = document.querySelectorAll('.newYorkCity');
+const yonkers = document.querySelectorAll('.yonkers');
+const sherrill = document.querySelectorAll('.sherrill');
+// const buttonCardCity = 
+
+
+
+
+
+selectButton.addEventListener('click', selectOpen);
+
+function selectOpen(e) {
+    selectButton.classList.toggle('button__active');
+    selectTitle.classList.toggle('title__active');
+    noneContacts.classList.toggle('container__active');
+    // console.log(e.target.parentNode.nextElementSibling);
+
+}
+
+// console.log(noneContacts);
+
+noneContacts.addEventListener('click', openCard);
+
+function openCard(e) {
+    console.log(e);
+    selectOpen();
+    noneCards.classList.toggle('cardCity');
+    selectText.innerText = e.target.innerText;
+    selectTitle.classList.toggle('title__active');
+    // console.log(none);
+    // console.log(canandaigua.classList);
+   
+    if (e.target.innerText === 'Canandaigua, NY') {
+        canandaigua.forEach(e => e.classList.remove('none'));
+        canandaigua.forEach(e => e.style.display = "block");
+        let tel = canandaigua[1].innerText;
+        e.target.parentNode.nextElementSibling.childNodes[3].childNodes[1].childNodes[1].outerHTML = `<a href="${tel1}">Call us</a>`;
+        console.log(tel);
+    }
+
+    if (e.target.innerText === 'New York City') {
+        newYorkCity.forEach(e => e.classList.remove('none'));
+        newYorkCity.forEach(e => e.style.display = "block");
+        let tel = newYorkCity[1].innerText;
+        e.target.parentNode.nextElementSibling.childNodes[3].childNodes[1].childNodes[1].outerHTML = `<a href="${tel1}">Call us</a>`;
+        console.log(tel);
+    }
+    if (e.target.innerText === 'Yonkers, NY') {
+        yonkers.forEach(e => e.classList.remove('none'));
+        yonkers.forEach(e => e.style.display = "block");
+        let tel = yonkers[1].innerText;
+        e.target.parentNode.nextElementSibling.childNodes[3].childNodes[1].childNodes[1].outerHTML = `<a href="${tel}">Call us</a>`;
+    }
+    if (e.target.innerText === 'Sherrill, NY') {
+        sherrill.forEach(e => e.classList.remove('none'));
+        sherrill.forEach(e => e.style.display = "block");
+        let tel = sherrill[1].innerText;
+        e.target.parentNode.nextElementSibling.childNodes[3].childNodes[1].childNodes[1].outerHTML = `<a href="${tel}">Call us</a>`;
+
+    }
+}
 
