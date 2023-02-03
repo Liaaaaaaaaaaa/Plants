@@ -1,0 +1,10 @@
+
+.blur {
+filter: blur(3px);
+  @extend %transition;
+}
+
+.displayBlock {
+  display: block;
+}
+

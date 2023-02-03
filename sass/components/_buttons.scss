@@ -4,19 +4,28 @@
     border-radius: 5px;
     border: 1px solid $color-brand;
     color: $color-brand;
+    @extend %transition;
 
     &:hover {
         background-color: $color-brand;
         color: $color-light;
+        @extend %transition;
     }
 
-    transition: all .3s;
+
+    &_active {
+        background-color: $color-brand;
+        color: $color-light;
+        @extend %transition;
+    }
 
     @include media-mobile {
         @include font (normal, 400, 15px, 20px);
         width: 121px;
         height: 35px;
     }
+
+
 }
 
 .button_learnMore {

@@ -61,7 +61,8 @@
     border-radius: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
 
     @include media-mobile {
         width: 100%;
@@ -78,6 +79,61 @@
     }
 }
 
+.tarif__title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+//------ACTIVE PRICE ----------------------
+
+.active__prise {
+    display: none;
+    display: flex;
+    // flex-direction: column;
+    // align-items: flex-start;
+    background: #D6E7D2;
+    // height: 154px;
+}
+
+.active__line {
+    padding-bottom: 12px;
+    border-bottom: solid 0.5px #AEA1A1;
+    width: 100%;
+}
+
+.active__part2 {
+    display: flex;
+    flex-direction: column
+}
+
+.activ__text {
+    @include font(normal, 300, 10px, 10px, $color-text7);
+    padding: 6px 0 2px;
+}
+
+.activ__cost {
+    padding-bottom: 10px;
+}
+
+.cost__title {
+    @include font (normal, 700, 16px, 20px, $color-brand);
+}
+
+.cost__text {
+    @include font(normal, 400, 12px, 20px, $color-dark);
+}
+
+.button__cost {
+    background: $color-light;
+    border-radius: 10px;
+    @include font(normal, 700, 14px, 20px, $color-text7);
+    border: none;
+    padding: 3px 20px;
+    width: 86px;
+}
+
 .tariff {
     width: 16px;
     height: 16px;
@@ -85,7 +141,12 @@
     background: #D9D9D9;
     border-radius: 50%;
     text-align: center;
+    // font-size: 10px;
+    background: url("../../img/prices/buttonPriseBottom.svg");
+}
 
+.active_tariff {
+    background: url("../../img/prices/buttonPriseUp.svg");
 }
 
 .tariff__text {
@@ -96,30 +157,12 @@
     }
 }
 
-// .tariff2 {
-//     width: 170px;
-//     padding: 0 0px;
-//     border: none;
-//     background: inherit;
-//     // border-radius: 50%;
-//     text-align: start;
-// }
 
-// .tariff3 {
-//     background: #EDF2EC;
-//     padding: 16px 40px 14px;
-//     width: 250px;
-//     border-radius: 20px;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     border: none;
-
-// }
+//---------HELP CONTAINER ------------------
 
 .help {
     text-align: right;
-    
+
 
     @include media-tablet {
         display: flex;
@@ -159,28 +202,28 @@
     }
 }
 
-    .prices__img {
-        max-width: 152px;
-        max-height: 175px;
+.prices__img {
+    max-width: 152px;
+    max-height: 175px;
 
-        @include media-mobile {
-            display: none;
-        }
+    @include media-mobile {
+        display: none;
+    }
+}
+
+.button__prices {
+    margin-bottom: 39px;
+
+    @include media-tablet {
+        margin-bottom: 34px;
     }
 
-    .button__prices {
-        margin-bottom: 39px;
-
-        @include media-tablet {
-            margin-bottom: 34px;
-        }
-
-        @include media-mobile {
-            margin-bottom: 0;
-            font-weight: 700;
-            background: $color-light;
-            padding: 8px 22px;
-            font-family: "Inika", sans-serif;
-        }
-
+    @include media-mobile {
+        margin-bottom: 0;
+        font-weight: 700;
+        background: $color-light;
+        padding: 8px 22px;
+        font-family: "Inika", sans-serif;
     }
+
+}

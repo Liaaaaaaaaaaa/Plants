@@ -113,13 +113,12 @@
 
                     <div class="project">
                         <img src="./img/project/first4.jpg" alt="img1">
-                        <div class="project-planting">
-                            <div class="project__discription">
-                                <div class="project__title">Planting</div>
-                                <p class="project__text">Lorem Ipsum has been the industry</p>
-                            </div>
+                        <div class="project-planting project__discription">
+                            <div class="project__title">Planting</div>
+                            <p class="project__text">Lorem Ipsum has been the industry</p>
                         </div>
                     </div>
+
                     <div class="project">
                         <img src="./img/project/first5.jpg" alt="img1">
                         <div class="project__discription">
@@ -144,19 +143,59 @@
                 <div class="prices__tariffs">
                     <h2 class="tariffs-title">Prices</h2>
                     <div class="tariffs">
-                        <form class="tariff__container">
+                        <!-- <form class="tariff__container">
                             <span class="tariff__text">Basics </span> <select size="1" class="tariff"></select>
+                        </form> -->
+                        <form class="tariff__container ">
+                            <div class=" tarif__title ">
+                                <span class="tariff__text">Basics </span>
+                                <div class="tariff"></div>
+                            </div>
+                            <div class="none-prise ">
+                                <div class="active__line"></div>
+                                <p class="activ__text">Release of Letraset sheets containing Lorem Ipsum passages, and
+                                    more recently</p>
+                                <p class="activ__cost">
+                                    <span class="cost__title">$15</span>
+                                    <span class="cost__text">/ per hour</span>
+                                </p>
+                                <button class="button__cost"><a href="#contacts">Order</a></button>
+                            </div>
                         </form>
 
-                        <form class="tariff__container">
-                            <span class="tariff__text">Standard </span> <select size="1" class="tariff">
-                                <!-- <option value="Basics"></option> -->
-                            </select>
+
+                        <form class="tariff__container ">
+                            <div class=" tarif__title ">
+                                <span class="tariff__text">Standart </span>
+                                <div class="tariff"></div>
+                            </div>
+                            <div class="none-prise">
+                                <div class="active__line"></div>
+                                <p class="activ__text">Release of Letraset sheets containing Lorem Ipsum passages, and
+                                    more recently</p>
+                                <p class="activ__cost">
+                                    <span class="cost__title">$25</span>
+                                    <span class="cost__text">/ per hour</span>
+                                </p>
+                                <button class="button__cost"><a href="#contacts">Order</a></button>
+                            </div>
                         </form>
 
-                        <form class="tariff__container">
-                            <span class="tariff__text">Pro care </span> <select size="1" class="tariff">
-                            </select>
+                        <form class="tariff__container ">
+                            <div class=" tarif__title ">
+                                <span class="tariff__text">Pro care</span>
+                                <div class="tariff"></div>
+                            </div>
+                            <div class="none-prise">
+                                <div class="active__line"></div>
+                                <p class="activ__text">Release of Letraset sheets containing Lorem Ipsum passages, and
+                                    more recently</p>
+                                <p class="activ__cost">
+                                    <span class="cost__title">$35</span>
+                                    <span class="cost__text">/ per hour</span>
+                                </p>
+                                <button class="button__cost"><a href="#contacts">Order</a></button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -172,21 +211,61 @@
 
         </section>
         <section class="Contact-us" id="contacts">
-            <div class="wrapper ">
+            <div class="wrapper">
                 <h2 class="contacts__title">Contact Us</h2>
                 <div class="wrapper__contacts">
                     <img class="contacts__img" src="./img/contacts/contact_woman1.png" alt="woman">
 
 
-                    <form class="form__select">
-                        <span class="contacts__text">City</span>
-                        <select class="contacts__select" size="1" name="City" id="City">
-                            <option value="City">City</option>
-                            <option value="Canandaigua, NY">Canandaigua, NY</option>
-                            <option value="New York City">New York City</option>
-                            <option value="Yonkers, NY">Yonkers, NY</option>
-                            <option value="Sherrill, NY">Sherrill, NY</option>
-                        </select>
+                    <form>
+
+                        <div class="form__select">
+                            <div class="select__title ">
+                                <span class="select__text">City</span>
+                                <span class="select__button "></span>
+                                <!-- button__active -->
+                            </div>
+                            <div class="none-contacts ">
+                                <!-- container__active -->
+                                <div class="option">Canandaigua, NY</div>
+                                <div class="option">New York City</div>
+                                <div class="option">Yonkers, NY</div>
+                                <div class="option">Sherrill, NY</div>
+                            </div>
+                            <div class="none-cards ">
+                                <div class="cardCity__text">
+                                    <span>City:</span>
+                                    <span class="none canandaigua">Canandaigua, NY</span>
+                                    <span class="none newYorkCity">New York City</span>
+                                    <span class="none yonkers">Yonkers, NY</span>
+                                    <span class="none sherrill">Sherrill, NY</span>
+                                    <span>Phone:</span>
+                                    <span class="none canandaigua">+1 585 393 0001</span>
+                                    <span class="none newYorkCity">+1 212 456 0002</span>
+                                    <span class="none yonkers">+1 914 678 0003</span>
+                                    <span class="none sherrill">+1 315 908 0004</span>
+                                    <span>Office adress:</span>
+                                    <span class="none canandaigua">151 Charlotte Street</span>
+                                    <span class="none  newYorkCity">9 East 91st Street</span>
+                                    <span class="none yonkers">511 Warburton Ave</span>
+                                    <span class="none sherrill">14 WEST Noyes BLVD</span>
+                                </div>
+                                <div class="cardCity__button">
+                                    <button class="buttonCardCity">
+                                        <a href=”tel:+158539300017”>Call us</a></button>
+                                </div>
+                            </div>
+
+                            <!-- <select class="contacts__select " size="1" name="City" id="City"> 
+                                <option disabled selected hidden class="option" value="City">City 
+                                </option> -->
+                            <!-- <option  class="option" value="Canandaigua, NY">Canandaigua, NY</option>
+                                <option class="option" value="New York City">New York City</option>
+                                <option class="option"value="Yonkers, NY">Yonkers, NY</option>
+                                <option class="option"value="Sherrill, NY">Sherrill, NY</option> -->
+                            <!-- </select> -->
+                        </div>
+
                     </form>
                 </div>
 

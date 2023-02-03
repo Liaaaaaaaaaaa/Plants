@@ -15,7 +15,7 @@ html {
   li {
     list-style: none; 
   }
-
+  
   a {
     text-decoration: none;
   }
@@ -45,3 +45,14 @@ html {
   color: $color-brand;
 }
 
+.none-prise {
+  display:none;
+}
+
+.none-contacts {
+  display:none;
+}
+
+.none-cards {
+  display: none;
+}
