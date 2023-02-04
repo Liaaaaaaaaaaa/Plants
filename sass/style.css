@@ -1144,11 +1144,11 @@ p {
   background: #D9D9D9;
   border-radius: 50%;
   text-align: center;
-  background: url("../../img/prices/buttonPriseBottom.svg");
+  background: url("../img/prices/buttonPriseBottom.svg");
 }
 
 .active_tariff {
-  background: url("../../img/prices/buttonPriseUp.svg");
+  background: url("../img/prices/buttonPriseUp.svg");
 }
 
 .tariff__text {
@@ -1373,7 +1373,7 @@ p {
   border: none;
   border-radius: 50%;
   text-align: center;
-  background: url("../../img/contacts/buttonDown.svg");
+  background: url("../img/contacts/buttonDown.svg");
 }
 
 .title__active {
@@ -1382,7 +1382,7 @@ p {
 }
 
 .button__active {
-  background: url("../../img/contacts/buttonUp.svg");
+  background: url("../img/contacts/buttonUp.svg");
 }
 
 .container__active {
