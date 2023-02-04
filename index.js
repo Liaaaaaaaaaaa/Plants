@@ -9,8 +9,6 @@ const burgerCross = document.querySelector('.burger-cross');
 const navLink = document.querySelectorAll('.nav__link');
 
 function openBurgerMenu() {
-    console.log('Kello');
-    // headerBurger.classList.add('header_burger');
     headerItem.classList.add('burger__item');
     nav.classList.add('nav_active');
     burgerCross.style.display = 'block';
@@ -208,26 +206,26 @@ function openCard(e) {
         canandaigua.forEach(e => e.classList.remove('none'));
         canandaigua.forEach(e => e.style.display = "block");
         let tel = canandaigua[1].innerText;
-        e.target.parentNode.nextElementSibling.childNodes[3].childNodes[1].childNodes[1].outerHTML = `<a href="${tel}">Call us</a>`;
+        e.target.parentNode.nextElementSibling.childNodes[3].childNodes[1].childNodes[1].outerHTML = `<a href="tel:${tel}">Call us</a>`;
     }
 
     if (e.target.innerText === 'New York City') {
         newYorkCity.forEach(e => e.classList.remove('none'));
         newYorkCity.forEach(e => e.style.display = "block");
         let tel = newYorkCity[1].innerText;
-        e.target.parentNode.nextElementSibling.childNodes[3].childNodes[1].childNodes[1].outerHTML = `<a href="${tel}">Call us</a>`;
+        e.target.parentNode.nextElementSibling.childNodes[3].childNodes[1].childNodes[1].outerHTML = `<a href="tel:${tel}">Call us</a>`;
     }
     if (e.target.innerText === 'Yonkers, NY') {
         yonkers.forEach(e => e.classList.remove('none'));
         yonkers.forEach(e => e.style.display = "block");
         let tel = yonkers[1].innerText;
-        e.target.parentNode.nextElementSibling.childNodes[3].childNodes[1].childNodes[1].outerHTML = `<a href="${tel}">Call us</a>`;
+        e.target.parentNode.nextElementSibling.childNodes[3].childNodes[1].childNodes[1].outerHTML = `<a href="tel:${tel}">Call us</a>`;
     }
     if (e.target.innerText === 'Sherrill, NY') {
         sherrill.forEach(e => e.classList.remove('none'));
         sherrill.forEach(e => e.style.display = "block");
         let tel = sherrill[1].innerText;
-        e.target.parentNode.nextElementSibling.childNodes[3].childNodes[1].childNodes[1].outerHTML = `<a href="${tel}">Call us</a>`;
+        e.target.parentNode.nextElementSibling.childNodes[3].childNodes[1].childNodes[1].outerHTML = `<a href="tel:${tel}">Call us</a>`;
 
     }
 }
