@@ -1125,16 +1125,19 @@ p {
 }
 
 .button__cost {
+  display: flex;
   background: #ffffff;
   border-radius: 10px;
+  border: none;
+  padding: 3px 20px;
+  width: 86px;
+}
+.button__cost a {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
   color: #717171;
-  border: none;
-  padding: 3px 20px;
-  width: 86px;
 }
 
 .tariff {
@@ -1233,6 +1236,9 @@ p {
 
 .button__prices {
   margin-bottom: 39px;
+}
+.button__prices a {
+  color: inherit;
 }
 @media (max-width: 768px) {
   .button__prices {

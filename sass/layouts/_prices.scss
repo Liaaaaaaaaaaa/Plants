@@ -126,12 +126,16 @@
 }
 
 .button__cost {
+    display: flex;
     background: $color-light;
     border-radius: 10px;
-    @include font(normal, 700, 14px, 20px, $color-text7);
     border: none;
     padding: 3px 20px;
     width: 86px;
+
+    a {
+        @include font(normal, 700, 14px, 20px, $color-text7);
+    }
 }
 
 .tariff {
@@ -214,6 +218,10 @@
 
 .button__prices {
     margin-bottom: 39px;
+
+    a {
+        color: inherit;
+    }
 
     @include media-tablet {
         margin-bottom: 34px;
