@@ -9,6 +9,8 @@
 
     @include media-mobile {
         padding: 25px 15px 0;
+        max-height: 445px;
+        overflow: hidden;
     }
 }
 
@@ -42,7 +44,8 @@
 
     @include media-mobile {
         margin-bottom: 80px;
-        @include font (normal, 700, 2.5rem, 3.3rem)
+        @include font (normal, 700, 2.5rem, 3.3rem);
+        margin-bottom: 42px;
     }
 }
 

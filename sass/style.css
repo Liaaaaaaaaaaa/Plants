@@ -1268,6 +1268,8 @@ p {
 @media (max-width: 380px) {
   .Contact-us {
     padding: 25px 15px 0;
+    max-height: 445px;
+    overflow: hidden;
   }
 }
 
@@ -1311,6 +1313,7 @@ p {
     font-size: 2.5rem;
     line-height: 3.3rem;
     color: "#000000";
+    margin-bottom: 42px;
   }
 }
 
