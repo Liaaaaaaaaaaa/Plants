@@ -1316,17 +1316,33 @@ p {
   .contacts__img {
     width: 200px;
     position: static;
+    margin-top: 250px;
   }
 }
 @media (max-width: 380px) {
   .contacts__img {
     width: 100px;
+    margin-top: 132px;
+  }
+}
+
+form {
+  width: 450px;
+}
+@media (max-width: 380px) {
+  form {
+    width: 300px;
   }
 }
 
 .form__select {
   display: flex;
   flex-direction: column;
+}
+@media (max-width: 768px) {
+  .form__select {
+    width: 100%;
+  }
 }
 
 .select__text {
@@ -1349,18 +1365,17 @@ p {
   background: #D6E7D2;
   display: flex;
   justify-content: space-between;
+  align-self: flex-end;
   align-items: center;
 }
 @media (max-width: 768px) {
   .select__title {
-    margin-bottom: 250px;
     width: 100%;
   }
 }
 @media (max-width: 380px) {
   .select__title {
     width: 100%;
-    margin-bottom: 132px;
   }
 }
 .select__title:hover {
@@ -1380,6 +1395,11 @@ p {
   background: #C1E698;
   box-shadow: none;
 }
+@media (max-width: 768px) {
+  .title__active {
+    margin-bottom: 0px;
+  }
+}
 
 .button__active {
   background: url("../img/contacts/buttonUp.svg");
@@ -1394,6 +1414,11 @@ p {
   font-size: 16px;
   line-height: 40px;
   color: #499A18;
+}
+@media (max-width: 768px) {
+  .container__active {
+    margin-bottom: 14px;
+  }
 }
 
 .option {
@@ -1411,6 +1436,11 @@ p {
   padding: 17px 76px 32px 33px;
   margin-top: 47px;
 }
+@media (max-width: 380px) {
+  .cardCity {
+    padding: 23px 36px;
+  }
+}
 .cardCity__text {
   display: grid;
   grid-template-columns: 128px 1fr;
@@ -1421,6 +1451,12 @@ p {
   line-height: 40px;
   color: #000000;
   margin-bottom: 24px;
+}
+@media (max-width: 380px) {
+  .cardCity__text {
+    grid-template-columns: 65px 1fr;
+    line-height: 20px;
+  }
 }
 .cardCity__text .canandaigua {
   display: none;

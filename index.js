@@ -176,6 +176,7 @@ function selectOpen(e) {
         selectTitle.classList.toggle('title__active');
         noneCards.classList.remove('cardCity');
         Array.from(none).forEach(e => e.style.display = "none");
+        selectText.innerText = 'City';
         
         if (selectText.innerText === 'Canandaigua, NY') {
             canandaigua.forEach(e => e.classList.remove('none'));
