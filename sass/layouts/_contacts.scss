@@ -108,7 +108,7 @@ form {
 
     @include media-mobile {
         width: 100%;
-      
+
     }
 
     &:hover {
@@ -195,8 +195,9 @@ form {
         .canandaigua {
             display: none;
             color: $color-text7;
+
             @include media-mobile {
-            //     line-height: 0;
+                //     line-height: 0;
             }
         }
 
@@ -222,13 +223,13 @@ form {
         justify-content: center;
 
         .buttonCardCity {
-            padding: 7px 49px;
             @include font (normal, 700, 10px, 13px, #717171);
-            border: 1px solid #E06733;
-            border-radius: 5px;
+            border: none;
 
             a {
-                text-decoration: none;
+                border: 1px solid #E06733;
+                border-radius: 5px;
+                padding: 7px 49px;
                 @include font (normal, 700, 10px, 13px, #717171);
             }
         }
